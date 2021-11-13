@@ -125,6 +125,16 @@ async function run(){
             console.log(result)
             res.json(result)
         })
+
+        //****************User Update************************* */
+
+        app.put('/users', async(req, res) => {
+            const user = req.body; 
+            const filter = {email: users.email};
+            const options = { upsert: true };
+
+        })
+
     }
     finally{
         // await client.close();
